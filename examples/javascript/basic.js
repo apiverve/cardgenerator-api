@@ -13,13 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/cardgenerator';
  */
 async function callCardGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            brand: &#x27;visa&#x27;,
-            count: 5
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
