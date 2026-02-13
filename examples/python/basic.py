@@ -17,14 +17,11 @@ def call_cardgenerator_api():
     Make a GET request to the Card Generator API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;brand&#x27;: &#x27;visa&#x27;, &#x27;count&#x27;: 5}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
