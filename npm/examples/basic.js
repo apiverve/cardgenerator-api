@@ -16,7 +16,7 @@ const api = new cardgeneratorAPI({
 // Example query
 var query = {
   brand: "visa",
-  count: 5
+  count: 1
 };
 
 // Make the API request using callback
