@@ -12,13 +12,8 @@ public class BasicExample {
         CardGeneratorAPIClient client = new CardGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Query parameters
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;brand&quot;, &quot;visa&quot;);
-        parameters.put(&quot;count&quot;, 5);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
