@@ -11,15 +11,13 @@ namespace APIVerve.API.CardGenerator
     public class CardGeneratorQueryOptions
     {
         /// <summary>
-        /// The brand of the card (e.g., visa, mastercard, amex, discover)
-        /// Example: visa
+        /// The brand of the card to generate
         /// </summary>
         [JsonProperty("brand")]
         public string Brand { get; set; }
 
         /// <summary>
         /// The number of test card numbers to generate
-        /// Example: 5
         /// </summary>
         [JsonProperty("count")]
         public string Count { get; set; }
