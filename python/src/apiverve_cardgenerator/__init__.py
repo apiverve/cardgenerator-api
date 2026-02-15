@@ -1,1 +1,3 @@
-from .apiClient import CardgeneratorAPIClient
+from .apiClient import CardgeneratorAPIClient, CardgeneratorAPIClientError
+
+__all__ = ['CardgeneratorAPIClient', 'CardgeneratorAPIClientError']
