@@ -44,7 +44,10 @@ from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "brand": "visa", "count": 1 }
+query = {
+    "brand": "visa",
+    "count": 1
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "brand": "visa", "count": 1 }
+query = {
+    "brand": "visa",
+    "count": 1
+}
 ```
 
 ###### Simple Request
@@ -197,7 +203,10 @@ from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient, Cardgenerat
 
 api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "brand": "visa", "count": 1 }
+query = {
+    "brand": "visa",
+    "count": 1
+}
 
 try:
     result = api.execute(query)
@@ -218,7 +227,10 @@ from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient, Cardgenerat
 
 api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "brand": "visa", "count": 1 }
+query = {
+    "brand": "visa",
+    "count": 1
+}
 
 try:
     result = api.execute(query)
@@ -252,7 +264,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient, CardgeneratorAPIClientError
 
-query = { "brand": "visa", "count": 1 }
+query = {
+    "brand": "visa",
+    "count": 1
+}
 
 # Using context manager ensures proper cleanup
 with CardgeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -278,7 +293,10 @@ from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient
 # Enable debug mode
 api = CardgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "brand": "visa", "count": 1 }
+query = {
+    "brand": "visa",
+    "count": 1
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -293,8 +311,12 @@ from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient
 
 api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "brand": "visa",
+    "count": 1
+}
+
 try:
-    query = { "brand": "visa", "count": 1 }
     result = api.execute(query)
     print(result)
 finally:
