@@ -1,7 +1,7 @@
 """
-Card Generator API - Basic Usage Example
+Test Card Generator API - Basic Usage Example
 
-This example demonstrates the basic usage of the Card Generator API.
+This example demonstrates the basic usage of the Test Card Generator API.
 API Documentation: https://docs.apiverve.com/ref/cardgenerator
 """
 
@@ -14,14 +14,17 @@ API_URL = 'https://api.apiverve.com/v1/cardgenerator'
 
 def call_cardgenerator_api():
     """
-    Make a GET request to the Card Generator API
+    Make a GET request to the Test Card Generator API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;brand&#x27;: &#x27;visa&#x27;}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
@@ -42,7 +45,7 @@ def call_cardgenerator_api():
         return None
 
 if __name__ == '__main__':
-    print('📤 Calling Card Generator API...\n')
+    print('📤 Calling Test Card Generator API...\n')
 
     result = call_cardgenerator_api()
 
