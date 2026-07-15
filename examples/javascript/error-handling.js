@@ -1,7 +1,7 @@
 /**
- * Card Generator API - Error Handling Example
+ * Test Card Generator API - Error Handling Example
  *
- * This example demonstrates proper error handling when using the Card Generator API.
+ * This example demonstrates proper error handling when using the Test Card Generator API.
  * API Documentation: https://docs.apiverve.com/ref/cardgenerator
  */
 
@@ -20,7 +20,7 @@ class APIError extends Error {
 /**
  * Make an API call with comprehensive error handling
  */
-async function callCardGeneratorAPIWithErrorHandling(queryParams = {}) {
+async function callTestCardGeneratorAPIWithErrorHandling(queryParams = {}) {
   try {
     console.log('📤 Making API request...');
 
@@ -105,7 +105,7 @@ async function callWithRetry(maxRetries = 3, initialDelay = 1000) {
     try {
       console.log(`\n🔄 Attempt ${attempt}/${maxRetries}`);
 
-      const result = await callCardGeneratorAPIWithErrorHandling({
+      const result = await callTestCardGeneratorAPIWithErrorHandling({
         // Your query parameters here
       });
 
