@@ -1,6 +1,6 @@
 openapi: 3.0.4
 info:
-  title: Card Generator
+  title: Test Card Generator
   description: >-
     Card Generator is a simple tool for generating test/sample card numbers. It
     returns a list of card numbers for testing.
@@ -36,6 +36,13 @@ paths:
           required: false
           description: The number of test card numbers to generate
           example: 5
+        - name: includeAvatar
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Include an AI-generated face avatar for the card owner
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -117,6 +124,8 @@ paths:
                       city: Margueriteton
                       state: Washington
                       zipCode: 39956-7950
+                    avatar: >-
+                      https://storage.googleapis.com/apiverve/APIResources/faces/Male/30-40/12345678.jpg?X-Goog-Signature=...
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
