@@ -1,7 +1,7 @@
 /**
- * Card Generator API - Basic Usage Example
+ * Test Card Generator API - Basic Usage Example
  *
- * This example demonstrates the basic usage of the Card Generator API.
+ * This example demonstrates the basic usage of the Test Card Generator API.
  * API Documentation: https://docs.apiverve.com/ref/cardgenerator
  */
 
@@ -9,11 +9,16 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/cardgenerator';
 
 /**
- * Make a GET request to the Card Generator API
+ * Make a GET request to the Test Card Generator API
  */
-async function callCardGeneratorAPI() {
+async function callTestCardGeneratorAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            brand: &#x27;visa&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
@@ -44,7 +49,7 @@ async function callCardGeneratorAPI() {
 }
 
 // Run the example
-callCardGeneratorAPI()
+callTestCardGeneratorAPI()
   .then(result => {
     if (result) {
       console.log('\n📊 Final Result:');
