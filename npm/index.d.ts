@@ -4,47 +4,60 @@ declare module '@apiverve/cardgenerator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface cardgeneratorResponse {
     status: string;
     error: string | null;
-    data: CardGeneratorData;
+    data: TestCardGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
-  interface CardGeneratorData {
-      brand: string;
-      count: number;
+  interface TestCardGeneratorData {
+      brand: null | string;
+      count: number | null;
       cards: Card[];
       owner: Owner;
   }
   
   interface Card {
-      cvv:        number;
-      issuer:     string;
-      id:         string;
-      number:     string;
-      expiration: string;
-      brand:      string;
+      cvv:        number | null;
+      issuer:     null | string;
+      id:         null | string;
+      number:     null | string;
+      expiration: null | string;
+      brand:      null | string;
       numberAlt:  NumberAlt;
   }
   
   interface NumberAlt {
-      masked:   string;
-      unmasked: string;
-      last4:    string;
+      masked:   null | string;
+      unmasked: null | string;
+      last4:    null | string;
   }
   
   interface Owner {
-      name:    string;
+      name:    null | string;
       address: Address;
+      avatar:  null | string;
   }
   
   interface Address {
-      street:  string;
-      city:    string;
-      state:   string;
-      zipCode: string;
+      street:  null | string;
+      city:    null | string;
+      state:   null | string;
+      zipCode: null | string;
   }
 
   export default class cardgeneratorWrapper {
