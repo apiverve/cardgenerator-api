@@ -1,7 +1,7 @@
 /**
- * Basic Example - Card Generator API
+ * Basic Example - Test Card Generator API
  *
- * This example demonstrates how to use the Card Generator API.
+ * This example demonstrates how to use the Test Card Generator API.
  * Make sure to set your API key in the .env file or replace '[YOUR_API_KEY]' below.
  */
 
@@ -16,11 +16,12 @@ const api = new cardgeneratorAPI({
 // Example query
 var query = {
   brand: "visa",
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 // Make the API request using callback
-console.log('Making request to Card Generator API...\n');
+console.log('Making request to Test Card Generator API...\n');
 
 api.execute(query, function (error, data) {
     if (error) {
