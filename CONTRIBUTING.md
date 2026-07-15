@@ -1,4 +1,4 @@
-# Contributing to Card Generator API
+# Contributing to Test Card Generator API
 
 Thank you for your interest in contributing! This guide will help you get started.
 
