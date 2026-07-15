@@ -1,7 +1,7 @@
 /*
- * Card Generator API - Basic Usage Example
+ * Test Card Generator API - Basic Usage Example
  *
- * This example demonstrates the basic usage of the Card Generator API.
+ * This example demonstrates the basic usage of the Test Card Generator API.
  * API Documentation: https://docs.apiverve.com/ref/cardgenerator
  */
 
@@ -14,22 +14,29 @@ using System.Linq;
 
 namespace APIVerve.Examples
 {
-    class CardGeneratorExample
+    class TestCardGeneratorExample
     {
         private static readonly string API_KEY = Environment.GetEnvironmentVariable("APIVERVE_API_KEY") ?? "YOUR_API_KEY_HERE";
         private static readonly string API_URL = "https://api.apiverve.com/v1/cardgenerator";
 
         /// <summary>
-        /// Make a GET request to the Card Generator API
+        /// Make a GET request to the Test Card Generator API
         /// </summary>
-        static async Task<JsonDocument> CallCardGeneratorAPI()
+        static async Task<JsonDocument> CallTestCardGeneratorAPI()
         {
             try
             {
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                var response = await client.GetAsync(API_URL);
+                // Query parameters
+                var queryParams &#x3D; new Dictionary&lt;string, string&gt; { [&quot;brand&quot;] &#x3D; &quot;visa&quot; };
+
+                var queryString = string.Join("&",
+                    queryParams.Select(kvp => $"{kvp.Key}={Uri.EscapeDataString(kvp.Value)}"));
+                var url = $"{API_URL}?{queryString}";
+
+                var response = await client.GetAsync(url);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
@@ -62,9 +69,9 @@ namespace APIVerve.Examples
 
         static async Task Main(string[] args)
         {
-            Console.WriteLine("📤 Calling Card Generator API...\n");
+            Console.WriteLine("📤 Calling Test Card Generator API...\n");
 
-            var result = await CallCardGeneratorAPI();
+            var result = await CallTestCardGeneratorAPI();
 
             if (result != null)
             {
