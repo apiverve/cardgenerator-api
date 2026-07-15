@@ -30,7 +30,7 @@ class cardgeneratorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/cardgenerator';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"brand":{"type":"string","required":true,"default":"visa"},"count":{"type":"integer","required":false,"min":1,"max":100,"default":1}};
+        this.validationRules = {"brand":{"type":"string","required":true,"default":"visa"},"count":{"type":"integer","required":false,"min":1,"max":100,"default":1},"includeAvatar":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
