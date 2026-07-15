@@ -1,4 +1,4 @@
-import com.apiverve.cardgenerator.CardGeneratorAPIClient;
+import com.apiverve.cardgenerator.TestCardGeneratorAPIClient;
 import com.apiverve.cardgenerator.APIResponse;
 import com.apiverve.cardgenerator.APIException;
 import org.json.JSONObject;
@@ -9,11 +9,15 @@ import java.util.Map;
 public class BasicExample {
     public static void main(String[] args) {
         // Initialize the API client with your API key
-        CardGeneratorAPIClient client = new CardGeneratorAPIClient("YOUR_API_KEY_HERE");
+        TestCardGeneratorAPIClient client = new TestCardGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Query parameters
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;brand&quot;, &quot;visa&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
