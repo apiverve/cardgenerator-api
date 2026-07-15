@@ -1,4 +1,4 @@
-# Card Generator API
+# Test Card Generator API
 
 Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing.
 
@@ -7,7 +7,7 @@ Card Generator is a simple tool for generating test/sample card numbers. It retu
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/cardgenerator.svg)](https://www.npmjs.com/package/@apiverve/cardgenerator)
 
-This is a Javascript Wrapper for the [Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source=npm&utm_medium=readme)
+This is a Javascript Wrapper for the [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source=npm&utm_medium=readme)
 
 ---
 
@@ -27,7 +27,7 @@ yarn add @apiverve/cardgenerator
 
 ## Configuration
 
-Before using the Card Generator API client, you have to setup your account and obtain your API Key.
+Before using the Test Card Generator API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
@@ -36,7 +36,7 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_
 
 [Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
 
-The Card Generator API documentation is found here: [https://docs.apiverve.com/ref/cardgenerator](https://docs.apiverve.com/ref/cardgenerator?utm_source=npm&utm_medium=readme).
+The Test Card Generator API documentation is found here: [https://docs.apiverve.com/ref/cardgenerator](https://docs.apiverve.com/ref/cardgenerator?utm_source=npm&utm_medium=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -61,7 +61,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   brand: "visa",
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 api.execute(query, function (error, data) {
@@ -82,7 +83,8 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   brand: "visa",
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 api.execute(query)
@@ -104,7 +106,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   brand: "visa",
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
     try {
@@ -129,79 +132,80 @@ async function makeRequest() {
     "count": 5,
     "cards": [
       {
-        "cvv": 798,
-        "issuer": "BANCO BILBAO VIZCAYA ARGENTARIA PARAGUAY, S.A.",
-        "id": "c5805305-62df-43d8-bdfd-ac72b459cc64",
-        "number": "4236228422790803",
-        "expiration": "05/2030",
+        "cvv": 175,
+        "issuer": "SOUTHEAST F.C.U.",
+        "id": "0faca124-9a33-4ac6-a3df-8bf103025779",
+        "number": "4750377207233152",
+        "expiration": "12/2030",
         "brand": "visa",
         "number_alt": {
-          "masked": "************0803",
-          "unmasked": "4236 2284 2279 0803",
-          "last4": "0803"
+          "masked": "************3152",
+          "unmasked": "4750 3772 0723 3152",
+          "last4": "3152"
         }
       },
       {
-        "cvv": 284,
-        "issuer": "IDBI BANK, LTD.",
-        "id": "6a9d0686-6390-40d3-81a9-83cb7da1e1e1",
-        "number": "4581393917480061",
-        "expiration": "05/2030",
+        "cvv": 129,
+        "issuer": "U.S. BANK, N.A.",
+        "id": "0d074efe-69e2-4e30-b49a-4cead1ea8411",
+        "number": "4431387818727358",
+        "expiration": "12/2030",
         "brand": "visa",
         "number_alt": {
-          "masked": "************0061",
-          "unmasked": "4581 3939 1748 0061",
-          "last4": "0061"
+          "masked": "************7358",
+          "unmasked": "4431 3878 1872 7358",
+          "last4": "7358"
         }
       },
       {
-        "cvv": 184,
-        "issuer": "CREDIT SAISON CO., LTD.",
-        "id": "97e9a5cb-0bd1-46d5-b486-61caf7692155",
-        "number": "4541313270704781",
-        "expiration": "05/2030",
+        "cvv": 249,
+        "issuer": "AUGUSTA VAH F.C.U.",
+        "id": "2f01f458-7422-400e-bbcf-41364564193b",
+        "number": "4425919427248836",
+        "expiration": "12/2030",
         "brand": "visa",
         "number_alt": {
-          "masked": "************4781",
-          "unmasked": "4541 3132 7070 4781",
-          "last4": "4781"
+          "masked": "************8836",
+          "unmasked": "4425 9194 2724 8836",
+          "last4": "8836"
         }
       },
       {
-        "cvv": 649,
-        "issuer": "CARD SERVICES FOR CREDIT UNIONS, INC.",
-        "id": "013f5e59-5c1a-4c92-a2a7-171384de2416",
-        "number": "4148851836478785",
-        "expiration": "05/2030",
+        "cvv": 892,
+        "issuer": "CITIZENS SECURITY BANK AND TRUST COMPANY",
+        "id": "d311e9d0-f410-4f75-a21f-f14125c88cbb",
+        "number": "4127737519045634",
+        "expiration": "12/2030",
         "brand": "visa",
         "number_alt": {
-          "masked": "************8785",
-          "unmasked": "4148 8518 3647 8785",
-          "last4": "8785"
+          "masked": "************5634",
+          "unmasked": "4127 7375 1904 5634",
+          "last4": "5634"
         }
       },
       {
-        "cvv": 161,
-        "issuer": "JPMORGAN CHASE BANK, N.A.",
-        "id": "d4cf0704-7c48-4221-bcae-53c676261487",
-        "number": "4867963822584424",
-        "expiration": "05/2030",
+        "cvv": 524,
+        "issuer": "CREDIT LIBANAIS S.A.L.",
+        "id": "64113f4d-c625-43d2-9d82-04f220c9e26f",
+        "number": "4741441509416816",
+        "expiration": "12/2030",
         "brand": "visa",
         "number_alt": {
-          "masked": "************4424",
-          "unmasked": "4867 9638 2258 4424",
-          "last4": "4424"
+          "masked": "************6816",
+          "unmasked": "4741 4415 0941 6816",
+          "last4": "6816"
         }
       }
     ],
     "owner": {
-      "name": "Herman Gulgowski",
+      "name": "Benny Swaniawski",
       "address": {
-        "street": "3659 Konopelski Coves",
-        "city": "Schmittburgh",
-        "state": "Utah",
-        "zipCode": "01681-6561"
-      }
+        "street": "007 Nelson Mountains",
+        "city": "Margueriteton",
+        "state": "Washington",
+        "zipCode": "39956-7950"
+      },
+      "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/30-40/12345678.jpg?X-Goog-Signature=..."
     }
   }
 }
