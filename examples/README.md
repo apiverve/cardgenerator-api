@@ -1,6 +1,6 @@
-# Card Generator API - Examples
+# Test Card Generator API - Examples
 
-This folder contains example code for using the Card Generator API across different platforms.
+This folder contains example code for using the Test Card Generator API across different platforms.
 
 ## 📁 Examples Structure
 
