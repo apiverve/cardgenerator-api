@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/cardgenerator",
+    "description": "Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "cardgenerator",
+        "card generator",
+        "card generator api",
+        "card generator tool",
+        "card generator software",
+        "card generator service"
+    ],
+    "homepage": "https://apiverve.com/marketplace/cardgenerator?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/cardgenerator",
+        "source": "https://github.com/apiverve/cardgenerator-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Cardgenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Cardgenerator\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
