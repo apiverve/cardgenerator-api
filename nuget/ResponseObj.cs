@@ -6,7 +6,7 @@
 //
 //    var responseObj = ResponseObj.FromJson(jsonString);
 
-namespace APIVerve.API.CardGenerator
+namespace APIVerve.API.TestCardGenerator
 {
     using System;
     using System.Collections.Generic;
@@ -25,6 +25,9 @@ namespace APIVerve.API.CardGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.CardGenerator
         public string Brand { get; set; }
 
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         [JsonProperty("cards")]
         public Card[] Cards { get; set; }
@@ -45,13 +48,13 @@ namespace APIVerve.API.CardGenerator
     public partial class Card
     {
         [JsonProperty("cvv")]
-        public long Cvv { get; set; }
+        public long? Cvv { get; set; }
 
         [JsonProperty("issuer")]
         public string Issuer { get; set; }
 
         [JsonProperty("id")]
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
 
         [JsonProperty("number")]
         public string Number { get; set; }
@@ -75,7 +78,7 @@ namespace APIVerve.API.CardGenerator
         public string Unmasked { get; set; }
 
         [JsonProperty("last4")]
-        public string Last4 { get; set; }
+        public long? Last4 { get; set; }
     }
 
     public partial class Owner
@@ -85,6 +88,9 @@ namespace APIVerve.API.CardGenerator
 
         [JsonProperty("address")]
         public Address Address { get; set; }
+
+        [JsonProperty("avatar")]
+        public Uri Avatar { get; set; }
     }
 
     public partial class Address
@@ -100,5 +106,17 @@ namespace APIVerve.API.CardGenerator
 
         [JsonProperty("zipCode")]
         public string ZipCode { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
