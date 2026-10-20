@@ -1,5 +1,5 @@
 import unittest
-from apiverve_cardgenerator.apiClient import CardgeneratorAPIClient
+from apiverve_testcardgenerator.apiClient import CardgeneratorAPIClient
 from unittest.mock import patch
 
 class TestCardgeneratorAPIClient(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestCardgeneratorAPIClient(unittest.TestCase):
         self.api_key = 'test_api_key'
         self.client = CardgeneratorAPIClient(self.api_key)
 
-    @patch('apiverve_cardgenerator.apiClient.requests.get')
+    @patch('apiverve_testcardgenerator.apiClient.requests.get')
     def test_make_request_success(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 200
@@ -16,7 +16,7 @@ class TestCardgeneratorAPIClient(unittest.TestCase):
         response = self.client.get('test_endpoint')
         self.assertIsInstance(response, dict)
 
-    @patch('apiverve_cardgenerator.apiClient.requests.get')
+    @patch('apiverve_testcardgenerator.apiClient.requests.get')
     def test_make_request_failure(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 404

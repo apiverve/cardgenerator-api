@@ -1,13 +1,13 @@
 [project]
-name = "apiverve-cardgenerator"
-version = "1.1.14"
+name = "apiverve-testcardgenerator"
+version = "1.2.2"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing."
-keywords = []
+description = "Test Card Generator creates card numbers that pass format and checksum validation, for testing checkout forms and payment UIs across major networks. They aren't real cards: no bank issued them, and they can't be charged or used to buy anything. Specify a brand to receive card numbers, security codes, expiration dates, issuers, and masked strings."
+keywords = ["card generator", "credit card generator", "test card generator api", "fake credit card generator", "random credit card generator"]
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 license = {text = "MIT"}
 dependencies = [
     "requests>=2.25.0"
@@ -17,35 +17,13 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
-    "Intended Audience :: Financial and Insurance Industry",
-    "Intended Audience :: Healthcare Industry",
-    "Intended Audience :: Education",
-    "Intended Audience :: Science/Research",
-    "Intended Audience :: Information Technology",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Utilities",
-    "Topic :: Scientific/Engineering",
-    "Topic :: Education",
-    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
-    "Topic :: Internet :: WWW/HTTP :: Site Management",
     "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: Libraries :: Application Frameworks",
-    "Topic :: Internet",
-    "Topic :: Communications",
-    "Topic :: Office/Business",
-    "Topic :: Text Processing",
-    "Topic :: Security",
-    "Topic :: Database",
-    "Topic :: Software Development :: Code Generators",
-    "Topic :: Software Development :: Pre-processors",
-    "Topic :: Software Development :: Quality Assurance",
-    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Natural Language :: English",
 ]
 
 [project.urls]
-Homepage = "https://apiverve.com?utm_source=pypi"
+Homepage = "https://apiverve.com/marketplace/cardgenerator?utm_source=pypi&utm_medium=referral&utm_content=homepage"
+Documentation = "https://docs.apiverve.com/ref/cardgenerator?utm_source=pypi&utm_medium=referral&utm_content=docs"
 Repository = "https://github.com/apiverve/cardgenerator-api"
-Documentation = "https://docs.apiverve.com/api/cardgenerator?utm_source=pypi"
 Twitter = "https://twitter.com/apivervehq"
