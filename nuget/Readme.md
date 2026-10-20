@@ -1,13 +1,12 @@
-TestCardGenerator API
+Test Card Generator API
 ============
 
-Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing.
+Test Card Generator creates card numbers that pass format and checksum validation, for testing checkout forms and payment UIs across major networks. They aren't real cards: no bank issued them, and they can't be charged or used to buy anything. Specify a brand to receive card numbers, security codes, expiration dates, issuers, and masked strings.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [TestCardGenerator API](https://apiverve.com/marketplace/cardgenerator?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.TestCardGenerator.svg)](https://www.nuget.org/packages/APIVerve.API.TestCardGenerator)
+
+This is a .NET wrapper for the [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the cardgenerator API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Test Card Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,10 +60,10 @@ class Program
         var apiClient = new TestCardGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TestCardGeneratorQueryOptions {
-    Brand = "visa",
-    Count = 1,
-    IncludeAvatar = true
-};
+            Brand = "visa",
+            Count = 1,
+            IncludeAvatar = true
+        };
 
         // Make the API call
         try
@@ -94,13 +93,13 @@ class Program
 
 ## Usage
 
-The TestCardGenerator API documentation is found here: [https://docs.apiverve.com/ref/cardgenerator](https://docs.apiverve.com/ref/cardgenerator?utm_source=nuget&utm_medium=readme).
+The Test Card Generator API documentation is found here: [https://docs.apiverve.com/ref/cardgenerator](https://docs.apiverve.com/ref/cardgenerator?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-TestCardGenerator API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Test Card Generator API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -127,10 +126,10 @@ public class Example
         var apiClient = new TestCardGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TestCardGeneratorQueryOptions {
-    Brand = "visa",
-    Count = 1,
-    IncludeAvatar = true
-};
+            Brand = "visa",
+            Count = 1,
+            IncludeAvatar = true
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -161,10 +160,10 @@ public class Example
         var apiClient = new TestCardGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TestCardGeneratorQueryOptions {
-    Brand = "visa",
-    Count = 1,
-    IncludeAvatar = true
-};
+            Brand = "visa",
+            Count = 1,
+            IncludeAvatar = true
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -200,10 +199,10 @@ public class Example
         var apiClient = new TestCardGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TestCardGeneratorQueryOptions {
-    Brand = "visa",
-    Count = 1,
-    IncludeAvatar = true
-};
+            Brand = "visa",
+            Count = 1,
+            IncludeAvatar = true
+        };
 
         try
         {
@@ -258,10 +257,10 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new TestCardGeneratorQueryOptions {
-    Brand = "visa",
-    Count = 1,
-    IncludeAvatar = true
-};
+            Brand = "visa",
+            Count = 1,
+            IncludeAvatar = true
+        };
 
         try
         {
@@ -472,7 +471,7 @@ using (var apiClient = new TestCardGeneratorAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -483,12 +482,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

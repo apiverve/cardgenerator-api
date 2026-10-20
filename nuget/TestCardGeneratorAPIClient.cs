@@ -67,8 +67,8 @@ namespace APIVerve.API.TestCardGenerator
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "brand", new ValidationRule { Type = "string", Required = true } },
-            { "count", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 100 } },
+            { "brand", new ValidationRule { Type = "string", Required = false } },
+            { "count", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 50 } },
             { "includeAvatar", new ValidationRule { Type = "boolean", Required = false } }
         };
 
