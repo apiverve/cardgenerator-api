@@ -1,13 +1,13 @@
-# [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing.
+Test Card Generator creates card numbers that pass format and checksum validation, for testing checkout forms and payment UIs across major networks. They aren&#x27;t real cards: no bank issued them, and they can&#x27;t be charged or used to buy anything. Specify a brand to receive card numbers, security codes, expiration dates, issuers, and masked strings.
 
 The Test Card Generator API provides a simple, reliable way to integrate test card generator functionality into your applications. Built for developers who need production-ready test card generator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/cardgenerator-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/cardgenerator](https://docs.apiverve.com/ref/cardgenerator)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -298,7 +298,7 @@ A real response from the Test Card Generator API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
