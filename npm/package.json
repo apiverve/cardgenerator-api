@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/cardgenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Test Card Generator creates card numbers that pass format and checksum validation, for testing checkout forms and payment UIs across major networks. They aren't real cards: no bank issued them, and they can't be charged or used to buy anything. Specify a brand to receive card numbers, security codes, expiration dates, issuers, and masked strings.",
   "main": "index.js",
   "types": "index.d.ts",
