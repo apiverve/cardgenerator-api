@@ -44,13 +44,14 @@ final _formatPatterns = {
   'hexColor': RegExp(r'^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$'),
 };
 
-/// Card Generator API client.
+/// Test Card Generator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/cardgenerator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/cardgenerator?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [brand] (required) - The brand of the card to generate
-/// * [count] - The number of test card numbers to generate [min: 1, max: 100]
+/// * [brand] - The brand of the card to generate
+/// * [count] - The number of test card numbers to generate [min: 1, max: 50]
+/// * [includeAvatar] - Include an AI-generated face avatar for the card owner
 class CardgeneratorClient {
   final String apiKey;
   final String baseUrl;
@@ -58,8 +59,9 @@ class CardgeneratorClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'brand': ValidationRule(type: 'string', required: true),
-    'count': ValidationRule(type: 'integer', required: false, min: 1, max: 100),
+    'brand': ValidationRule(type: 'string', required: false),
+    'count': ValidationRule(type: 'integer', required: false, min: 1, max: 50),
+    'includeAvatar': ValidationRule(type: 'boolean', required: false),
   };
 
   CardgeneratorClient(this.apiKey, {
@@ -125,7 +127,7 @@ class CardgeneratorClient {
     }
   }
 
-  /// Execute a request to the Card Generator API.
+  /// Execute a request to the Test Card Generator API.
   ///
   /// Parameters are validated before sending the request.
   Future<CardgeneratorResponse> execute(Map<String, dynamic> params) async {
@@ -170,7 +172,7 @@ class CardgeneratorClient {
   }
 }
 
-/// Exception thrown by the Card Generator API client.
+/// Exception thrown by the Test Card Generator API client.
 class CardgeneratorException implements Exception {
   final String message;
 
