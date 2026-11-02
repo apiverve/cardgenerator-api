@@ -52,6 +52,8 @@ final _formatPatterns = {
 /// * [brand] - The brand of the card to generate
 /// * [count] - The number of test card numbers to generate [min: 1, max: 50]
 /// * [includeAvatar] - Include an AI-generated face avatar for the card owner
+/// * [gateway] - Return this payment gateway's documented test cards instead of generated numbers. They trigger a known outcome in the gateway's test mode
+/// * [scenario] - With gateway: the outcome to test, such as success, declined, insufficient_funds, expired_card, incorrect_cvc, fraud or 3ds_required (Stripe). Decline scenarios are mostly Visa cards, so the brand is ignored when the gateway has none for it
 class CardgeneratorClient {
   final String apiKey;
   final String baseUrl;
@@ -62,6 +64,8 @@ class CardgeneratorClient {
     'brand': ValidationRule(type: 'string', required: false),
     'count': ValidationRule(type: 'integer', required: false, min: 1, max: 50),
     'includeAvatar': ValidationRule(type: 'boolean', required: false),
+    'gateway': ValidationRule(type: 'string', required: false),
+    'scenario': ValidationRule(type: 'string', required: false),
   };
 
   CardgeneratorClient(this.apiKey, {

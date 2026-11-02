@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_cardgenerator: ^1.2.3
+  apiverve_cardgenerator: ^1.2.4
 ```
 
 Then run:
@@ -36,7 +36,9 @@ void main() async {
     final response = await client.execute({
       'brand': 'visa',
       'count': 1,
-      'includeAvatar': true
+      'includeAvatar': true,
+      'gateway': '',
+      'scenario': 'success'
     });
 
     print('Status: ${response.status}');

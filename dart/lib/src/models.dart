@@ -167,16 +167,22 @@ class CardgeneratorRequest {
   String? brand;
   int? count;
   bool? includeAvatar;
+  String? gateway;
+  String? scenario;
 
   CardgeneratorRequest({
     this.brand,
     this.count,
     this.includeAvatar,
+    this.gateway,
+    this.scenario,
   });
 
   Map<String, dynamic> toJson() => {
       if (brand != null) 'brand': brand,
       if (count != null) 'count': count,
       if (includeAvatar != null) 'includeAvatar': includeAvatar,
+      if (gateway != null) 'gateway': gateway,
+      if (scenario != null) 'scenario': scenario,
     };
 }
