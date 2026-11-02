@@ -26,7 +26,9 @@ class CardgeneratorAPIClient:
     VALIDATION_RULES = {
         "brand": {"type": "string", "required": False, "default": "visa"},
         "count": {"type": "integer", "required": False, "min": 1, "max": 50, "default": 1},
-        "includeAvatar": {"type": "boolean", "required": False, "default": False}
+        "includeAvatar": {"type": "boolean", "required": False, "default": False},
+        "gateway": {"type": "string", "required": False},
+        "scenario": {"type": "string", "required": False, "default": "success"}
     }
 
     # Format validation patterns

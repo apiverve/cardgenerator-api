@@ -46,7 +46,9 @@ api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 
 try:
@@ -88,7 +90,9 @@ Using the API client, you can perform requests to the API.
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 ```
 
@@ -208,7 +212,9 @@ api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 
 try:
@@ -233,7 +239,9 @@ api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 
 try:
@@ -271,7 +279,9 @@ from apiverve_testcardgenerator.apiClient import CardgeneratorAPIClient, Cardgen
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 
 # Using context manager ensures proper cleanup
@@ -301,7 +311,9 @@ api = CardgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 
 # Debug information will be printed to console
@@ -320,7 +332,9 @@ api = CardgeneratorAPIClient("[YOUR_API_KEY]")
 query = {
     "brand": "visa",
     "count": 1,
-    "includeAvatar": true
+    "includeAvatar": true,
+    "gateway": "",
+    "scenario": "success"
 }
 
 try:
