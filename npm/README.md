@@ -59,7 +59,9 @@ Using the API is simple. All you have to do is make a request. The API will retu
 var query = {
   brand: "visa",
   count: 1,
-  includeAvatar: false
+  includeAvatar: false,
+  gateway: "",
+  scenario: "success"
 };
 
 api.execute(query, function (error, data) {
@@ -81,7 +83,9 @@ You can also use promises to make requests. The API returns a promise that you c
 var query = {
   brand: "visa",
   count: 1,
-  includeAvatar: false
+  includeAvatar: false,
+  gateway: "",
+  scenario: "success"
 };
 
 api.execute(query)
@@ -104,7 +108,9 @@ async function makeRequest() {
     var query = {
   brand: "visa",
   count: 1,
-  includeAvatar: false
+  includeAvatar: false,
+  gateway: "",
+  scenario: "success"
 };
 
     try {
