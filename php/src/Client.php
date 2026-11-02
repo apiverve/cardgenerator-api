@@ -15,7 +15,7 @@ use APIVerve\Cardgenerator\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['brand' => 'visa', 'count' => 1, 'includeAvatar' => true]);
+ * $response = $client->execute(['brand' => 'visa', 'count' => 1, 'includeAvatar' => true, 'gateway' => '', 'scenario' => 'success']);
  * print_r($response);
  * ```
  *
@@ -36,7 +36,9 @@ class Client
     private const VALIDATION_RULES = [
         'brand' => ['type' => 'string', 'required' => false],
         'count' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 50],
-        'includeAvatar' => ['type' => 'boolean', 'required' => false]
+        'includeAvatar' => ['type' => 'boolean', 'required' => false],
+        'gateway' => ['type' => 'string', 'required' => false],
+        'scenario' => ['type' => 'string', 'required' => false]
     ];
 
     /**

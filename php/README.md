@@ -30,7 +30,9 @@ $client = new Client('YOUR_API_KEY');
 $response = $client->execute([
     'brand' => 'visa',
     'count' => 1,
-    'includeAvatar' => true
+    'includeAvatar' => true,
+    'gateway' => '',
+    'scenario' => 'success'
 ]);
 
 // Print the response
@@ -46,7 +48,7 @@ use APIVerve\Cardgenerator\Exceptions\APIException;
 use APIVerve\Cardgenerator\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['brand' => 'visa', 'count' => 1, 'includeAvatar' => true]);
+    $response = $client->execute(['brand' => 'visa', 'count' => 1, 'includeAvatar' => true, 'gateway' => '', 'scenario' => 'success']);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
