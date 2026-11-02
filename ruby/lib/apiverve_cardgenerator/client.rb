@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Cardgenerator::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ brand: "visa", count: 1, includeAvatar: true })
+    #   response = client.execute({ brand: "visa", count: 1, includeAvatar: true, gateway: "", scenario: "success" })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/cardgenerator?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'brand' => { type: 'string', required: false }, 'count' => { type: 'integer', required: false, min: 1, max: 50 }, 'includeAvatar' => { type: 'boolean', required: false } }
+      VALIDATION_RULES = { 'brand' => { type: 'string', required: false }, 'count' => { type: 'integer', required: false, min: 1, max: 50 }, 'includeAvatar' => { type: 'boolean', required: false }, 'gateway' => { type: 'string', required: false }, 'scenario' => { type: 'string', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {

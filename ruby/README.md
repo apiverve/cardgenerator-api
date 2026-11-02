@@ -38,7 +38,9 @@ client = APIVerve::Cardgenerator::Client.new(api_key: "YOUR_API_KEY")
 response = client.execute({
   brand: "visa",
   count: 1,
-  includeAvatar: true
+  includeAvatar: true,
+  gateway: "",
+  scenario: "success"
 })
 
 # Print the response
@@ -50,7 +52,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ brand: "visa", count: 1, includeAvatar: true })
+  response = client.execute({ brand: "visa", count: 1, includeAvatar: true, gateway: "", scenario: "success" })
   puts response["data"]
 rescue APIVerve::Cardgenerator::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
