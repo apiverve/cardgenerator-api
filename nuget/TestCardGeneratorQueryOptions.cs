@@ -27,5 +27,17 @@ namespace APIVerve.API.TestCardGenerator
         /// </summary>
         [JsonProperty("includeAvatar")]
         public bool? IncludeAvatar { get; set; }
+
+        /// <summary>
+        /// Return this payment gateway's documented test cards instead of generated numbers. They trigger a known outcome in the gateway's test mode
+        /// </summary>
+        [JsonProperty("gateway")]
+        public string Gateway { get; set; }
+
+        /// <summary>
+        /// With gateway: the outcome to test, such as success, declined, insufficient_funds, expired_card, incorrect_cvc, fraud or 3ds_required (Stripe). Decline scenarios are mostly Visa cards, so the brand is ignored when the gateway has none for it
+        /// </summary>
+        [JsonProperty("scenario")]
+        public string Scenario { get; set; }
     }
 }

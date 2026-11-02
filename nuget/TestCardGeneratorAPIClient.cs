@@ -69,7 +69,9 @@ namespace APIVerve.API.TestCardGenerator
         {
             { "brand", new ValidationRule { Type = "string", Required = false } },
             { "count", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 50 } },
-            { "includeAvatar", new ValidationRule { Type = "boolean", Required = false } }
+            { "includeAvatar", new ValidationRule { Type = "boolean", Required = false } },
+            { "gateway", new ValidationRule { Type = "string", Required = false } },
+            { "scenario", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

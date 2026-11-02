@@ -62,7 +62,9 @@ class Program
         var queryOptions = new TestCardGeneratorQueryOptions {
             Brand = "visa",
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gateway = "",
+            Scenario = "success"
         };
 
         // Make the API call
@@ -128,7 +130,9 @@ public class Example
         var queryOptions = new TestCardGeneratorQueryOptions {
             Brand = "visa",
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gateway = "",
+            Scenario = "success"
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -162,7 +166,9 @@ public class Example
         var queryOptions = new TestCardGeneratorQueryOptions {
             Brand = "visa",
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gateway = "",
+            Scenario = "success"
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -201,7 +207,9 @@ public class Example
         var queryOptions = new TestCardGeneratorQueryOptions {
             Brand = "visa",
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gateway = "",
+            Scenario = "success"
         };
 
         try
@@ -259,7 +267,9 @@ public class Example
         var queryOptions = new TestCardGeneratorQueryOptions {
             Brand = "visa",
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gateway = "",
+            Scenario = "success"
         };
 
         try
@@ -302,7 +312,9 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 var queryOptions = new TestCardGeneratorQueryOptions {
     Brand = "visa",
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gateway = "",
+    Scenario = "success"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -330,7 +342,9 @@ apiClient.SetLogger(message =>
 var queryOptions = new TestCardGeneratorQueryOptions {
     Brand = "visa",
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gateway = "",
+    Scenario = "success"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -350,7 +364,9 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 var queryOptions = new TestCardGeneratorQueryOptions {
     Brand = "visa",
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gateway = "",
+    Scenario = "success"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -364,7 +380,9 @@ The API client implements `IDisposable` for proper resource cleanup:
 var queryOptions = new TestCardGeneratorQueryOptions {
     Brand = "visa",
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gateway = "",
+    Scenario = "success"
 };
 
 using (var apiClient = new TestCardGeneratorAPIClient("[YOUR_API_KEY]"))
