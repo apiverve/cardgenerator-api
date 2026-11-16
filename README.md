@@ -1,6 +1,6 @@
 # [Test Card Generator API](https://apiverve.com/marketplace/cardgenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Test Card Generator creates card numbers that pass format and checksum validation, for testing checkout forms and payment UIs across major networks. They aren&#x27;t real cards: no bank issued them, and they can&#x27;t be charged or used to buy anything. Specify a brand to receive card numbers, security codes, expiration dates, issuers, and masked strings.
+Test Card Generator is a test credit card generator API: it creates card numbers that pass format and Luhn checksum validation, for testing checkout forms and payment UIs across Visa, Mastercard, Amex, Discover, JCB, Diners Club and UnionPay. They aren&#x27;t real cards: no bank issued them, and they can&#x27;t be charged or used to buy anything. Each card comes with a security code, expiration date, issuer and masked number, and the gateway option returns Stripe&#x27;s or Braintree&#x27;s own documented test cards instead.
 
 The Test Card Generator API provides a simple, reliable way to integrate test card generator functionality into your applications. Built for developers who need production-ready test card generator capabilities without the complexity of building from scratch.
 
