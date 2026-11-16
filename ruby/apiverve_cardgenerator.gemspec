@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_cardgenerator"
-  spec.version       = "1.2.5"
+  spec.version       = "1.2.6"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Test Card Generator API - Ruby Client"
-  spec.description   = "Test Card Generator creates card numbers that pass format and checksum validation, for testing checkout forms and payment UIs across major networks. They aren't real cards: no bank issued them, and they can't be charged or used to buy anything. Specify a brand to receive card numbers, security codes, expiration dates, issuers, and masked strings."
+  spec.description   = "Test Card Generator is a test credit card generator API: it creates card numbers that pass format and Luhn checksum validation, for testing checkout forms and payment UIs across Visa, Mastercard, Amex, Discover, JCB, Diners Club and UnionPay. They aren't real cards: no bank issued them, and they can't be charged or used to buy anything. Each card comes with a security code, expiration date, issuer and masked number, and the gateway option returns Stripe's or Braintree's own documented test cards instead."
   spec.homepage      = "https://apiverve.com/marketplace/cardgenerator?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
